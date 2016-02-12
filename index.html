@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+<button id="rock">rock</button>
+<button id="paper">paper</button>
+<button id="scissors">scissors</button>
+
+<h1 id="winner"></h1>
+
+<script type="text/javascript">
+
+	var computerChoice = "scissors";
+	var userChoice;
+
+	document.getElementById('rock').onclick = function () {
+		userChoice = "rock"; //can also use document.getElementById('rock').innerHTML
+		whoWon ();
+	}
+
+	document.getElementById('paper').onclick = function () {
+		userChoice = "paper"; //can also use document.getElementById('rock').innerHTML
+		whoWon ();
+	}
+
+	document.getElementById('scissors').onclick = function () {
+		userChoice = "scissors"; //can also use document.getElementById('rock').innerHTML
+		whoWon ();
+	}
+
+	function whoWon () {
+		if (userChoice === "rock") {
+			document.getElementById('winner').innerHTML = "You Won!";
+		}
+		else if (userChoice === "paper") {
+			document.getElementById('winner').innerHTML = "You Lost Bro...";
+		}
+		else {
+			document.getElementById('winner').innerHTML = "Tie Game...";
+		} //could also have been an else if 
+	}
+
+
+
+</script>
+
+</body>
+
+</html>
